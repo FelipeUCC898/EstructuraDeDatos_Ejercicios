@@ -1,0 +1,34 @@
+{
+    "name": "purchase-history-manager",
+    "version": "1.0.0",
+    "description": "A TypeScript-based purchase history management system using Stack data structure",
+    "main": "purchase_history_manager.js",
+    "scripts": {
+        "build": "tsc",
+        "start": "node purchase_history_manager.js",
+        "start:interactive": "node interactive_purchase_manager.js",
+        "dev": "ts-node purchase_history_manager.ts",
+        "dev:interactive": "ts-node interactive_purchase_manager.ts",
+        "demo": "ts-node purchase_history_manager.ts",
+        "demo:interactive": "ts-node interactive_purchase_manager.ts"
+    },
+    "keywords": [
+        "typescript",
+        "stack",
+        "data-structure",
+        "purchase-history",
+        "undo-functionality",
+        "e-commerce"
+    ],
+    "author": "Felipe",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^20.0.0",
+        "typescript": "^5.0.0",
+        "ts-node": "^10.9.0"
+    },
+    "dependencies": {
+        "readline-sync": "^1.4.10",
+        "@types/readline-sync": "^1.4.4"
+    }
+}
