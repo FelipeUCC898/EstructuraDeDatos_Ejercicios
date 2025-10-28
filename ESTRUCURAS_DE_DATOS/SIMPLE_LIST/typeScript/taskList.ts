@@ -9,7 +9,7 @@ class Task {
         public title: string,
         public description: string,
         public state: State = State.PENDIENTE,
-        public next = null
+        public next: Task | null = null, 
 
     ) {}
 }
@@ -30,8 +30,8 @@ class TaskList {
     } else {
       if (this.lastNode) {
         this.lastNode.next = task;
+        this.lastNode = task;
       }
-      this.lastNode = task;
     }
   }
 
@@ -54,7 +54,7 @@ class TaskList {
     let current: Task | null = this.firstNode;
     while (current !== null) {
       if (current.title === title) {
-        current.state = State.COMPLETADA;
+        current.state = State.COMPLETADO;
         console.log(`Task '${title}' marked as completed.`);
         return;
       }
